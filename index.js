@@ -1,7 +1,13 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+let votingAge = 12;
 
+if (votingAge > 18 ){
+    console.log(true)
+}else{
+    console.log(false)
+}
 
 
 
@@ -10,30 +16,65 @@
 
 
 
-
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+let number = "1999"
+console.log(Number(number)); // returns int
+console.log(number); // returns string
 
 
 
 //Task d: Write a function to multiply a*b 
 
 
-
-
+function multiply(a, b) {
+    return( a * b );
+}
+console.log(multiply(5,2));
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
+function ageInDogYears (yourAge){
+    return(yourAge * 7);
+}
+console.log(ageInDogYears(28));
 
 
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
+
+function dogFeeder (pounds, years){
+    if (years >= 1){
+        if(pounds <= 5 ){
+            return pounds * 0.05;
+        }
+        if(pounds >= 6 && pounds <=10 ){
+            return pounds * 0.04;
+        }
+        if(pounds >= 11 && pounds <=15 ){
+            return pounds * 0.03;
+        }
+        if(pounds >= 15 ){
+            return pounds * 0.02;
+        }
+    } else if (years < 1) {
+        if (years <= 0.166 && years <= 0.33) {
+          return pounds * 0.1;
+        }
+        if (years <= 0.33 && years <= 0.58) {
+          return pounds * 0.05;
+        }
+        if (years <= 0.58 && years <= 1)  {
+          return pounds * 0.04;
+        }
+      }
+}
+
+console.log(dogFeeder(15, 1));
 
 //feeding requirements
 // adult dogs at least 1 year 
@@ -60,7 +101,7 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+ 
   
 
 /************************************************************** Task 5 **************************************************************/
